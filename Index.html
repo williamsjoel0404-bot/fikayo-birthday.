@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AJAYI FIKAYO | Birthday 🎂</title>
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#03000b;
+    color:white;
+    font-family:Arial, sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+   INTRO SCREEN
+========================= */
+
+#intro{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    background:
+    radial-gradient(circle,#420078,#10001f 40%,#020005 80%);
+
+    transition:1s;
+}
+
+.intro-content{
+    padding:20px;
+    animation:float 3s infinite;
+}
+
+.intro-small{
+    letter-spacing:5px;
+    color:#e8c7ff;
+    margin-bottom:18px;
+    font-size:13px;
+}
+
+.intro-title{
+    font-size:clamp(55px,15vw,120px);
+    font-weight:900;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ff35d4,
+        #ffffff,
+        #8c5cff,
+        #ff35d4
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+    animation:gradient 4s linear infinite;
+}
+
+.intro-name{
+    font-size:clamp(24px,7vw,50px);
+    margin:12px 0 35px;
+    color:#ffc8f5;
+
+    text-shadow:
+    0 0 10px #ff27d1,
+    0 0 30px #ff27d1;
+}
+
+.enter,
+.hero-button,
+.wish-btn{
+
+    padding:15px 30px;
+
+    border:2px solid #ff42d7;
+    border-radius:50px;
+
+    background:#21002f;
+    color:white;
+
+    font-weight:bold;
+    font-size:16px;
+
+    box-shadow:0 0 25px #ff42d7;
+
+    transition:.3s;
+}
+
+.enter:hover,
+.hero-button:hover,
+.wish-btn:hover{
+    transform:scale(1.08);
+}
+
+/* =========================
+   MAIN
+========================= */
+
+#main{
+    display:none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(
+        circle at 50% 30%,
+        #420070,
+        transparent 35%
+    ),
+    linear-gradient(
+        #05000e,
+        #130022,
+        #030007
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+    padding:25px;
+}
+
+.hero-small{
+    letter-spacing:5px;
+    color:#e8c7ff;
+}
+
+h1{
+
+    font-size:clamp(48px,12vw,115px);
+
+    line-height:1;
+
+    margin:20px 0;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ff36d1,
+        #ffffff,
+        #a36cff,
+        #ff36d1
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+    animation:gradient 4s linear infinite;
+}
+
+.hero-name{
+
+    font-size:clamp(30px,8vw,72px);
+
+    font-weight:bold;
+
+    color:#ffd1f7;
+
+    text-shadow:
+    0 0 10px #ff31d1,
+    0 0 30px #ff31d1,
+    0 0 70px #7b35ff;
+
+    animation:float 2.5s infinite;
+}
+
+.cake{
+    font-size:90px;
+    margin:25px;
+    animation:cake 1.5s infinite;
+}
+
+/* =========================
+   BALLOONS
+========================= */
+
+.balloon{
+
+    position:absolute;
+
+    bottom:-150px;
+
+    width:55px;
+    height:70px;
+
+    border-radius:50%;
+
+    animation:balloon 10s linear infinite;
+
+    opacity:.8;
+}
+
+.balloon:after{
+
+    content:"";
+
+    position:absolute;
+
+    top:68px;
+    left:50%;
+
+    height:130px;
+    width:2px;
+
+    background:#ffffff88;
+}
+
+.b1{
+    left:5%;
+    background:#ff3ec9;
+}
+
+.b2{
+    left:25%;
+    background:#6c55ff;
+    animation-delay:2s;
+}
+
+.b3{
+    left:50%;
+    background:#32dfff;
+    animation-delay:4s;
+}
+
+.b4{
+    left:75%;
+    background:#ffcc43;
+    animation-delay:1s;
+}
+
+.b5{
+    left:90%;
+    background:#ff527e;
+    animation-delay:3s;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.card-section{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+    background:
+    radial-gradient(
+        circle,
+        #250040,
+        transparent 55%
+    );
+}
+
+.card{
+
+    width:min(800px,95%);
+
+    padding:45px 25px;
+
+    border-radius:30px;
+
+    background:#ffffff10;
+
+    border:1px solid #ffffff30;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 0 40px #a03cff40;
+
+    animation:float 4s infinite;
+}
+
+.card h2{
+
+    color:#ffbdf1;
+
+    font-size:clamp(32px,7vw,45px);
+
+    margin-bottom:25px;
+}
+
+#typewriter{
+
+    font-size:18px;
+
+    line-height:2;
+
+    min-height:220px;
+}
+
+/* =========================
+   THREE PHOTO GALLERY
+========================= */
+
+.photo-section{
+
+    min-height:100vh;
+
+    text-align:center;
+
+    padding:100px 20px;
+
+    background:
+    radial-gradient(
+        circle at center,
+        #18002d,
+        #03000b
+    );
+}
+
+.photo-section h2{
+
+    color:#ffbdf1;
+
+    font-size:clamp(32px,7vw,45px);
+
+    margin-bottom:15px;
+
+    text-shadow:
+    0 0 15px #ff31d0;
+}
+
+.gallery-subtitle{
+
+    color:#d9b8e8;
+
+    margin-bottom:50px;
+
+    font-size:16px;
+}
+
+/* Gallery container */
+
+.gallery{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+}
+
+/* Individual photo card */
+
+.photo-card{
+
+    position:relative;
+
+    height:420px;
+
+    padding:5px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        45deg,
+        #ff31d0,
+        #7d4cff,
+        #35e6ff,
+        #ff31d0
+    );
+
+    background-size:300%;
+
+    animation:gradient 4s linear infinite;
+
+    box-shadow:
+    0 0 30px #ff31d080;
+
+    transition:.5s;
+
+    overflow:hidden;
+}
+
+.photo-card:hover{
+
+    transform:
+    translateY(-15px)
+    scale(1.03);
+
+    box-shadow:
+    0 0 60px #ff31d0;
+}
+
+.photo-inner{
+
+    width:100%;
+    height:100%;
+
+    border-radius:21px;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        145deg,
+        #21002f,
+        #08000d
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.photo-inner img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+/* Placeholder shown if photo doesn't exist */
+
+.photo-placeholder{
+
+    text-align:center;
+
+    color:#e7c7f5;
+
+    font-size:60px;
+
+    line-height:1.4;
+
+    padding:20px;
+}
+
+.photo-placeholder small{
+
+    display:block;
+
+    font-size:14px;
+
+    color:#b995c7;
+
+    margin-top:10px;
+}
+
+/* Photo captions */
+
+.photo-caption{
+
+    position:absolute;
+
+    bottom:15px;
+
+    left:15px;
+    right:15px;
+
+    padding:12px;
+
+    border-radius:15px;
+
+    background:#000000aa;
+
+    backdrop-filter:blur(8px);
+
+    font-weight:bold;
+
+    font-size:15px;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section{
+
+    min-height:100vh;
+
+    text-align:center;
+
+    padding:100px 20px;
+
+    background:
+    radial-gradient(
+        circle,
+        #250040,
+        transparent 55%
+    );
+}
+
+.countdown-section h2{
+
+    color:#ffc5f3;
+
+    font-size:clamp(32px,7vw,45px);
+
+    margin-bottom:30px;
+}
+
+.countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+}
+
+.time{
+
+    width:100px;
+
+    padding:20px 10px;
+
+    border-radius:20px;
+
+    background:#ffffff10;
+
+    border:1px solid #ffffff30;
+
+    box-shadow:
+    0 0 20px #823cff30;
+}
+
+.time span{
+
+    display:block;
+
+    font-size:32px;
+
+    color:#ff64dc;
+
+    font-weight:bold;
+}
+
+.time small{
+    color:#ccc;
+}
+
+/* =========================
+   WISH SECTION
+========================= */
+
+.wish-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:60px 20px;
+
+    text-align:center;
+}
+
+.wish-box{
+    width:min(650px,95%);
+}
+
+.wish-box h2{
+
+    color:#ffb8ef;
+
+    font-size:clamp(35px,8vw,50px);
+
+    margin-bottom:25px;
+}
+
+.candle{
+
+    position:relative;
+
+    width:80px;
+    height:170px;
+
+    margin:50px auto 35px;
+
+    border-radius:12px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ff4fd1,
+        #ffb2ee,
+        #ff4fd1
+    );
+
+    box-shadow:
+    0 0 30px #ff3ad0;
+}
+
+.flame{
+
+    position:absolute;
+
+    width:35px;
+    height:55px;
+
+    background:
+    linear-gradient(
+        #fff,
+        #ffd52e,
+        #ff4c00
+    );
+
+    border-radius:50%;
+
+    top:-60px;
+    left:22px;
+
+    box-shadow:
+    0 0 25px #ff9d00;
+
+    animation:flame .4s infinite alternate;
+}
+
+.flame.off{
+
+    opacity:0;
+
+    transform:scale(.1);
+}
+
+#wishMessage{
+
+    margin-top:25px;
+
+    color:#ffbaf0;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    background:
+    radial-gradient(
+        circle,
+        #420069,
+        transparent 50%
+    ),
+    #040008;
+}
+
+.final h2{
+
+    font-size:clamp(35px,9vw,80px);
+
+    text-shadow:
+    0 0 10px #ff36d0,
+    0 0 30px #ff36d0,
+    0 0 70px #8144ff;
+}
+
+.final p{
+
+    margin-top:25px;
+
+    font-size:20px;
+
+    color:#ddd;
+}
+
+/* =========================
+   CANVAS
+========================= */
+
+#fireworks,
+#confetti{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:1000;
+}
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-btn{
+
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    z-index:5000;
+
+    width:55px;
+    height:55px;
+
+    border-radius:50%;
+
+    border:1px solid #ff50d7;
+
+    background:#19002c;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 0 20px #ff35d0;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes gradient{
+
+    0%{
+        background-position:0%;
+    }
+
+    100%{
+        background-position:300%;
+    }
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+@keyframes cake{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:
+        scale(1.15)
+        rotate(3deg);
+    }
+}
+
+@keyframes balloon{
+
+    from{
+        transform:
+        translateY(0)
+        rotate(-5deg);
+    }
+
+    to{
+        transform:
+        translateY(-125vh)
+        rotate(15deg);
+    }
+}
+
+@keyframes flame{
+
+    from{
+        transform:
+        scale(.9)
+        rotate(-3deg);
+    }
+
+    to{
+        transform:
+        scale(1.1)
+        rotate(3deg);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:750px){
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+        max-width:400px;
+    }
+
+    .photo-card{
+
+        height:430px;
+    }
+}
+
+@media(max-width:600px){
+
+    .card{
+        padding:35px 18px;
+    }
+
+    #typewriter{
+        font-size:16px;
+    }
+
+    .time{
+        width:75px;
+    }
+
+    .time span{
+        font-size:25px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<div id="intro">
+
+    <div class="intro-content">
+
+        <div class="intro-small">
+            ✨ A SPECIAL SURPRISE AWAITS ✨
+        </div>
+
+        <div class="intro-title">
+            FIKAYO
+        </div>
+
+        <div class="intro-name">
+            AJAYI FIKAYO 🎂
+        </div>
+
+        <button
+            class="enter"
+            onclick="enterSite()">
+
+            🎁 CLICK TO ENTER 🎁
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MAIN WEBSITE
+========================= -->
+
+<div id="main">
+
+<canvas id="fireworks"></canvas>
+<canvas id="confetti"></canvas>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="balloon b1"></div>
+    <div class="balloon b2"></div>
+    <div class="balloon b3"></div>
+    <div class="balloon b4"></div>
+    <div class="balloon b5"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            ✨ SEPTEMBER 12, 2026 ✨
+        </div>
+
+        <h1>
+            HAPPY<br>
+            BIRTHDAY
+        </h1>
+
+        <div class="hero-name">
+            AJAYI FIKAYO 💖
+        </div>
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <button
+            class="hero-button"
+            onclick="megaCelebration()">
+
+            🎆 START THE CELEBRATION 🎆
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- MESSAGE -->
+
+<section class="card-section">
+
+    <div class="card">
+
+        <h2>
+            💌 A Message For Fikayo
+        </h2>
+
+        <p id="typewriter"></p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     THREE PHOTO GALLERY
+========================= -->
+
+<section class="photo-section">
+
+    <h2>
+        📸 THE BIRTHDAY STAR
+    </h2>
+
+    <p class="gallery-subtitle">
+        Three special memories for a special person ✨
+    </p>
+
+
+    <div class="gallery">
+
+
+        <!-- PHOTO 1 -->
+
+        <div class="photo-card">
+
+            <div class="photo-inner">
+
+                <img
+                    src="fikayo1.jpg"
+                    alt="Fikayo photo 1"
+                    onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder\'>📸<small>Add<br>fikayo1.jpg</small></div>';"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+                ✨ Memory One
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 2 -->
+
+        <div class="photo-card">
+
+            <div class="photo-inner">
+
+                <img
+                    src="fikayo2.jpg"
+                    alt="Fikayo photo 2"
+                    onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder\'>📸<small>Add<br>fikayo2.jpg</small></div>';"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+                💖 Memory Two
+            </div>
+
+        </div>
+
+
+        <!-- PHOTO 3 -->
+
+        <div class="photo-card">
+
+            <div class="photo-inner">
+
+                <img
+                    src="fikayo3.jpg"
+                    alt="Fikayo photo 3"
+                    onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'photo-placeholder\'>📸<small>Add<br>fikayo3.jpg</small></div>';"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+                🎉 Memory Three
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- COUNTDOWN -->
+
+<section class="countdown-section">
+
+    <h2>
+        ⏰ BIRTHDAY COUNTDOWN
+    </h2>
+
+    <div class="countdown">
+
+        <div class="time">
+            <span id="days">00</span>
+            <small>Days</small>
+        </div>
+
+        <div class="time">
+            <span id="hours">00</span>
+            <small>Hours</small>
+        </div>
+
+        <div class="time">
+            <span id="minutes">00</span>
+            <small>Minutes</small>
+        </div>
+
+        <div class="time">
+            <span id="seconds">00</span>
+            <small>Seconds</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MAKE A WISH -->
+
+<section class="wish-section">
+
+    <div class="wish-box">
+
+        <h2>
+            🕯️ MAKE A WISH
+        </h2>
+
+        <p>
+            Close your eyes... make a wish...
+            then blow out the candle. ✨
+        </p>
+
+        <div class="candle">
+
+            <div
+                id="flame"
+                class="flame">
+            </div>
+
+        </div>
+
+        <button
+            class="wish-btn"
+            onclick="makeWish()">
+
+            🌟 MAKE A WISH 🌟
+
+        </button>
+
+        <p id="wishMessage"></p>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+    <div>
+
+        <h2>
+            🎉 HAPPY BIRTHDAY<br>
+            FIKAYO! 🎉
+        </h2>
+
+        <p>
+            May this new chapter be your best one yet. ❤️
+            <br><br>
+            Keep shining.
+            Keep winning.
+            Keep smiling. ✨
+        </p>
+
+    </div>
+
+</section>
+
+</div>
+
+
+<!-- MUSIC BUTTON -->
+
+<button
+    class="music-btn"
+    onclick="toggleMusic()">
+
+    🎵
+
+</button>
+
+
+<!-- OPTIONAL MUSIC -->
+
+<audio
+    id="music"
+    loop>
+
+    <source
+        src="birthday.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<script>
+
+/* =========================
+   ENTER WEBSITE
+========================= */
+
+function enterSite(){
+
+    const intro =
+        document.getElementById("intro");
+
+    intro.style.opacity="0";
+
+    setTimeout(()=>{
+
+        intro.style.display="none";
+
+        document.getElementById("main")
+        .style.display="block";
+
+        startConfetti();
+
+        autoFireworks();
+
+        typeMessage();
+
+    },1000);
+
+}
+
+
+/* =========================
+   BIRTHDAY MESSAGE
+========================= */
+
+const message =
+
+`Today isn't just another day...
+
+It's the day we celebrate YOU. 🎉
+
+Happy Birthday, Ajayi Fikayo! ❤️
+
+May this new chapter bring you happiness,
+success, unforgettable memories,
+amazing opportunities and plenty of reasons to smile.
+
+May your dreams get closer,
+your victories get bigger,
+and your best days be ahead of you.
+
+Keep shining.
+Keep being amazing.
+
+HAPPY BIRTHDAY FIKAYO! 🎂🎉✨`;
+
+
+let typeIndex=0;
+
+
+function typeMessage(){
+
+    if(typeIndex < message.length){
+
+        document.getElementById("typewriter")
+        .innerHTML +=
+        message[typeIndex]
+        .replace(/\n/g,"<br>");
+
+        typeIndex++;
+
+        setTimeout(
+            typeMessage,
+            30
+        );
+    }
+
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+const birthday =
+    new Date(
+        "September 12, 2026 00:00:00"
+    ).getTime();
+
+
+function countdown(){
+
+    const difference =
+        birthday - Date.now();
+
+
+    if(difference <= 0){
+
+        document.getElementById("days")
+        .textContent="🎉";
+
+        document.getElementById("hours")
+        .textContent="🎂";
+
+        document.getElementById("minutes")
+        .textContent="🥳";
+
+        document.getElementById("seconds")
+        .textContent="🎁";
+
+        return;
+    }
+
+
+    const days =
+        Math.floor(
+            difference /
+            (1000*60*60*24)
+        );
+
+
+    const hours =
+        Math.floor(
+            difference /
+            (1000*60*60)
+        ) % 24;
+
+
+    const minutes =
+        Math.floor(
+            difference /
+            (1000*60)
+        ) % 60;
+
+
+    const seconds =
+        Math.floor(
+            difference / 1000
+        ) % 60;
+
+
+    document.getElementById("days")
+    .textContent =
+    String(days).padStart(2,"0");
+
+
+    document.getElementById("hours")
+    .textContent =
+    String(hours).padStart(2,"0");
+
+
+    document.getElementById("minutes")
+    .textContent =
+    String(minutes).padStart(2,"0");
+
+
+    document.getElementById("seconds")
+    .textContent =
+    String(seconds).padStart(2,"0");
+
+}
+
+setInterval(countdown,1000);
+
+countdown();
+
+
+/* =========================
+   MUSIC
+========================= */
+
+let musicPlaying=false;
+
+
+function toggleMusic(){
+
+    const music =
+        document.getElementById("music");
+
+
+    if(!musicPlaying){
+
+        music.play().catch(()=>{
+
+            alert(
+                "Add birthday.mp3 to the same folder as index.html first!"
+            );
+
+        });
+
+        musicPlaying=true;
+
+    }
+
+    else{
+
+        music.pause();
+
+        musicPlaying=false;
+
+    }
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+const confettiCanvas =
+    document.getElementById("confetti");
+
+const cctx =
+    confettiCanvas.getContext("2d");
+
+
+const fireworksCanvas =
+    document.getElementById("fireworks");
+
+const fctx =
+    fireworksCanvas.getContext("2d");
+
+
+function resizeCanvas(){
+
+    confettiCanvas.width =
+        window.innerWidth;
+
+    confettiCanvas.height =
+        window.innerHeight;
+
+
+    fireworksCanvas.width =
+        window.innerWidth;
+
+    fireworksCanvas.height =
+        window.innerHeight;
+
+}
+
+resizeCanvas();
+
+
+window.addEventListener(
+    "resize",
+    resizeCanvas
+);
+
+
+let confetti=[];
+
+
+function startConfetti(){
+
+    for(let i=0;i<180;i++){
+
+        confetti.push({
+
+            x:window.innerWidth/2,
+
+            y:window.innerHeight/2,
+
+            vx:(Math.random()-.5)*18,
+
+            vy:(Math.random()-.5)*18-5,
+
+            size:Math.random()*8+3,
+
+            gravity:.18,
+
+            rotation:Math.random()*360
+
+        });
+
+    }
+
+    drawConfetti();
+
+}
+
+
+function drawConfetti(){
+
+    cctx.clearRect(
+        0,
+        0,
+        confettiCanvas.width,
+        confettiCanvas.height
+    );
+
+
+    confetti.forEach(
+        (p,index)=>{
+
+            p.x+=p.vx;
+
+            p.y+=p.vy;
+
+            p.vy+=p.gravity;
+
+            p.rotation+=8;
+
+
+            cctx.save();
+
+            cctx.translate(
+                p.x,
+                p.y
+            );
+
+            cctx.rotate(
+                p.rotation
+            );
+
+
+            cctx.fillStyle =
+                `hsl(${Math.random()*360},100%,70%)`;
+
+
+            cctx.fillRect(
+                -p.size/2,
+                -p.size/2,
+                p.size,
+                p.size
+            );
+
+
+            cctx.restore();
+
+
+            if(
+                p.y >
+                window.innerHeight+50
+            ){
+
+                confetti.splice(
+                    index,
+                    1
+                );
+
+            }
+
+        }
+    );
+
+
+    if(confetti.length){
+
+        requestAnimationFrame(
+            drawConfetti
+        );
+
+    }
+
+}
+
+
+/* =========================
+   FIREWORKS
+========================= */
+
+let particles=[];
+
+
+function fireworksBurst(x,y){
+
+    const colors=[
+
+        "#ff35d0",
+        "#8b5cff",
+        "#35e6ff",
+        "#ffd43b",
+        "#ffffff"
+
+    ];
+
+
+    const color =
+        colors[
+            Math.floor(
+                Math.random()*
+                colors.length
+            )
+        ];
+
+
+    for(let i=0;i<90;i++){
+
+        const angle =
+            Math.PI*2*i/90;
+
+
+        const speed =
+            Math.random()*7+3;
+
+
+        particles.push({
+
+            x:x,
+
+            y:y,
+
+            vx:
+                Math.cos(angle)*
+                speed,
+
+            vy:
+                Math.sin(angle)*
+                speed,
+
+            life:100,
+
+            color:color,
+
+            size:
+                Math.random()*3+1
+
+        });
+
+    }
+
+}
+
+
+function drawFireworks(){
+
+    fctx.clearRect(
+        0,
+        0,
+        fireworksCanvas.width,
+        fireworksCanvas.height
+    );
+
+
+    particles.forEach(
+        (p,index)=>{
+
+            p.x+=p.vx;
+
+            p.y+=p.vy;
+
+            p.vy+=.08;
+
+            p.life-=1.5;
+
+
+            fctx.globalAlpha =
+                p.life/100;
+
+
+            fctx.fillStyle =
+                p.color;
+
+
+            fctx.beginPath();
+
+            fctx.arc(
+                p.x,
+                p.y,
+                p.size,
+                0,
+                Math.PI*2
+            );
+
+            fctx.fill();
+
+
+            if(p.life<=0){
+
+                particles.splice(
+                    index,
+                    1
+                );
+
+            }
+
+        }
+    );
+
+
+    fctx.globalAlpha=1;
+
+
+    requestAnimationFrame(
+        drawFireworks
+    );
+
+}
+
+drawFireworks();
+
+
+/* =========================
+   AUTOMATIC FIREWORKS
+========================= */
+
+function autoFireworks(){
+
+    for(let i=0;i<10;i++){
+
+        setTimeout(()=>{
+
+            fireworksBurst(
+
+                Math.random()*
+                window.innerWidth,
+
+                Math.random()*
+                window.innerHeight*.55
+
+            );
+
+        },i*600);
+
+    }
+
+}
+
+
+/* =========================
+   BIG CELEBRATION
+========================= */
+
+function megaCelebration(){
+
+    startConfetti();
+
+
+    for(let i=0;i<18;i++){
+
+        setTimeout(()=>{
+
+            fireworksBurst(
+
+                Math.random()*
+                window.innerWidth,
+
+                Math.random()*
+                window.innerHeight*.65
+
+            );
+
+        },i*220);
+
+    }
+
+}
+
+
+/* =========================
+   MAKE A WISH
+========================= */
+
+function makeWish(){
+
+    document
+    .getElementById("flame")
+    .classList.add("off");
+
+
+    document
+    .getElementById("wishMessage")
+    .textContent =
+    "✨ Wish locked in! May it come true! ✨";
+
+
+    startConfetti();
+
+
+    setTimeout(()=>{
+
+        fireworksBurst(
+            window.innerWidth/2,
+            window.innerHeight/2
+        );
+
+    },400);
+
+}
+
+
+/* =========================
+   CLICK FIREWORKS
+========================= */
+
+document.addEventListener(
+    "click",
+    event=>{
+
+        if(
+            event.target.closest("button")
+        ){
+            return;
+        }
+
+
+        if(
+            document
+            .getElementById("main")
+            .style.display === "block"
+        ){
+
+            fireworksBurst(
+                event.clientX,
+                event.clientY
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
